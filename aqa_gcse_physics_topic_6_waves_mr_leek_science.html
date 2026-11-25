@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQA GCSE Physics — Topic 6: Waves | Mr Leek Science</title>
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — ROYAL / SAPPHIRE BLUE DESIGN TOKENS (PHYSICS TOPIC 6)
+       Zero external font/CSS dependencies so it renders cleanly online or offline
+       ========================================================================== */
+    :root {
+      --navy-950: #09152b;
+      --navy-900: #0f172a;
+      --blue-900: #1e3a8a;
+      --blue-800: #1e40af;
+      --blue-700: #1d4ed8;
+      --blue-600: #2563eb;
+      --blue-500: #3b82f6;
+      --blue-400: #60a5fa;
+
+      --blue-200: #bfdbfe;
+      --blue-100: #dbeafe;
+      --blue-50: #eff6ff;
+      --blue-tint: #f8fbff;
+
+      --bg-page: #f8fafc;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --sky-100: #e0f2fe;
+      --sky-700: #0369a1;
+      --green-chip-bg: #dcfce7;
+      --green-chip-fg: #15803d;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --rose-700: #be123c;
+      --rose-600: #dc2626;
+      --rose-500: #ef4444;
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+
+      --shadow-shell: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-cta: 0 6px 18px -2px rgba(29, 78, 216, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      letter-spacing: -0.015em;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP ROYAL / SAPPHIRE BLUE BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #09152b 0%, #1e3a8a 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-200);
+    }
+
+    .brand-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 800px;
+      line-height: 1.52;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--blue-700);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3.5px rgba(59, 130, 246, 0.2);
+    }
+
+    .text-input.input-error {
+      border-color: var(--rose-500);
+      background-color: var(--rose-50);
+      box-shadow: 0 0 0 3.5px rgba(239, 68, 68, 0.16);
+      animation: shakeInput 0.34s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--rose-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--blue-100);
+      border: 1px solid var(--blue-200);
+      color: var(--blue-800);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--sky-100);
+      color: var(--sky-700);
+    }
+
+    .chip-green {
+      background: var(--green-chip-bg);
+      color: var(--green-chip-fg);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-blue {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--blue-700);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.28);
+    }
+
+    .cap-notice {
+      margin-top: 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--amber-700);
+      background: var(--amber-50);
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 7px 12px;
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--blue-600);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-brand {
+      background: var(--navy-950);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .hud-pill-dark {
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-blue {
+      background: var(--blue-100);
+      color: var(--blue-800);
+      border: 1px solid var(--blue-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--blue-700);
+      color: var(--blue-700);
+      background: var(--blue-50);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue-800), var(--blue-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--blue-800);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rp-badge {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      border: 1px solid #fcd34d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.52;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--blue-200);
+      border-left: 4px solid var(--blue-700);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--blue-900);
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      font-family: inherit;
+      font-size: 0.84rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--blue-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background: var(--blue-50);
+      color: var(--blue-900);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--rose-600);
+      background: var(--rose-50);
+      color: var(--rose-700);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--rose-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--rose-600);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--rose-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.56;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--blue-600);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--blue-800);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--blue-700);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--rose-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--rose-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--rose-600); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--rose-600); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--blue-800);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         ROYAL / SAPPHIRE BLUE HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 6 &bull; PAPER 2 REVISION (8463 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12c2.5-5 5-5 7.5 0s5 5 7.5 0 4.5-5 5 0"></path>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Waves Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 6 content or Required Practicals &amp; Calculations only, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Transverse &amp; longitudinal waves, wave speed v = f&lambda;, ripple tank &amp; string practicals, electromagnetic spectrum order, uses &amp; hazards (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-green">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Includes wave refraction wavefront diagrams, radio wave production via alternating currents, and gamma rays from nuclear changes (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Physics -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8463</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Physics</div>
+            <p class="tier-card-desc">Full 8463 content: Reflection &amp; RP9 (angles of incidence/reflection, specular vs diffuse), Sound waves &amp; human ear (20 Hz–20 kHz), Ultrasound &amp; seismic P/S waves, Lenses (convex/concave ray diagrams, magnification), Visible light &amp; colour filters, and Black body radiation (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- Option 1: All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-blue" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Waves Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers wave properties, v = f&lambda;, reflection &amp; refraction, EM spectrum, sound, ultrasound, seismic waves, lenses, colour &amp; black body radiation.</p>
+            </div>
+          </div>
+
+          <!-- Option 2: Required Practicals & Calculations Only -->
+          <div class="focus-card" id="focus-card-practicals" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practicals')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practicals')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v5.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 8.5V3"></path>
+                <path d="M7 15h10"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practicals &amp; Calculations Only</span>
+                <span id="focus-check-practicals" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused drill on RP8 (Ripple Tank &amp; Waves on a String), RP9 (Reflection &amp; Refraction of Light), RP10 (Leslie Cube Infrared Radiation), and wave equation / magnification maths.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions 5-Column Grid -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">44 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+
+        <div id="cap-feedback-banner" class="cap-notice hidden"></div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span class="hud-pill-brand">Mr Leek Science</span>
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-blue">Higher Tier</span>
+          <span id="hud-focus-pill" class="hud-pill-blue">All Waves Topics</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">New Quiz Configuration</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1 &bull; Sub-topic</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; New Quiz Configuration</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: DIAGNOSTIC RESULTS DASHBOARD
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8–9</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Tier Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">New Quiz Configuration</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong Area (&ge;75%)</span>
+          <span class="tag-a">Developing (50–74%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show Full Question-by-Question Review</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Physics (8463 &amp; 8464) Topic 6 Waves Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE PHYSICS TOPIC 6 QUESTION BANK (76 UNIQUE QUESTIONS)
+       Subtopics:
+       1. Transverse & Longitudinal Waves, Properties & Wave Equations (16 Qs)
+       2. Reflection, Refraction & Wavefronts (12 Qs)
+       3. The Electromagnetic Spectrum: Properties, Uses & Hazards (16 Qs)
+       4. Sound Waves, Ultrasound & Seismic Waves [Separate Physics 8463] (12 Qs)
+       5. Lenses, Ray Diagrams & Visible Light [Separate Physics 8463] (12 Qs)
+       6. Black Body Radiation & Earth's Temperature [Separate Physics 8463] (8 Qs)
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Transverse & Longitudinal Waves, Properties & Wave Equations": "Waves transfer ENERGY without transferring matter. In transverse waves (ripples on water, all EM waves, S-waves), oscillations are perpendicular to energy transfer; in longitudinal waves (sound, P-waves), oscillations are parallel to energy transfer, creating compressions and rarefactions. Memorise: Period T = 1 / f (seconds) and Wave speed v = f &times; &lambda; (m/s). Always convert kHz (&times;10&sup3;), MHz (&times;10&sup6;), and cm (&divide;100) before substituting! For RP8 (Ripple Tank &amp; Waves on a String): measure across multiple waves (e.g. 10 wavelengths) and divide to reduce percentage error; use a stroboscope or video recording to freeze moving wavefronts.",
+      "Reflection, Refraction & Wavefronts": "Always measure angles of incidence (i) and reflection (r) between the ray and the NORMAL (the dashed line drawn at 90&deg; to the boundary). Law of reflection: i = r. Specular reflection from a smooth surface produces a clear image; diffuse reflection (scattering) from a rough surface scatters light in all directions. In RP9 (Reflection &amp; Refraction), use a narrow ray box slit in a darkened room, mark ray centres with sharp pencil crosses, and measure angles with a protractor. Higher Tier: Refraction occurs because waves change speed across a boundary; when entering a slower/denser medium at an angle, the wavefront bends TOWARDS the normal (wavelength decreases, frequency stays constant). If i = 0&deg; (along the normal), speed and wavelength still decrease, but the wave does NOT change direction.",
+      "The Electromagnetic Spectrum: Properties, Uses & Hazards": "Order from longest wavelength / lowest frequency to shortest wavelength / highest frequency: Radio waves &rarr; Microwaves &rarr; Infrared &rarr; Visible light &rarr; Ultraviolet &rarr; X-rays &rarr; Gamma rays. All are transverse waves travelling at 3.0 &times; 10&sup8; m/s in a vacuum. Higher Tier: Radio waves are produced by oscillations in electrical circuits and induce an alternating current of the same frequency when absorbed by an aerial; gamma rays originate from changes in the nucleus of an atom. UV, X-rays, and gamma rays are ionising radiation (measured in Sieverts, Sv). For RP10 (Leslie Cube): keep the IR detector at a FIXED distance from each face (control variable), fill with hot water, and compare emission: Matt black &gt; Shiny black &gt; White &gt; Shiny silver.",
+      "Sound Waves, Ultrasound & Seismic Waves": "Separate Physics (8463) only: Sound waves are longitudinal waves caused by vibrating objects; they travel through solids, liquids, and gases (fastest in solids) via particle vibrations, so they CANNOT travel through a vacuum. Sound causes the eardrum and cochlea structures to vibrate, converting sound into electrical signals sent to the brain—limited to human hearing range 20 Hz to 20 kHz (20,000 Hz). Ultrasound (&gt; 20 kHz) is partially reflected at boundaries between media of different densities; use s = v &times; t and remember to DIVIDE total echo time by 2 (or divide total path distance by 2)! Seismic P-waves are longitudinal and travel through both solids and liquids; S-waves are transverse and CANNOT travel through liquids—proving the Earth has a liquid outer core.",
+      "Lenses, Ray Diagrams & Visible Light": "Separate Physics (8463) only: Convex (converging) lenses bring parallel rays together at the principal focus; concave (diverging) lenses spread parallel rays out so they appear to diverge from a virtual principal focus. Real images can be projected onto a screen (rays actually meet); virtual images cannot be projected (rays only appear to diverge from behind the lens). Magnification = image height / object height (no units—a ratio!). Visible light spectrum (longest to shortest &lambda;): Red, Orange, Yellow, Green, Blue, Indigo, Violet. Opaque objects appear coloured by strongly reflecting certain wavelengths and absorbing all others; colour filters transmit only specific wavelengths and absorb the rest.",
+      "Black Body Radiation & Earth's Temperature": "Separate Physics (8463) only: All bodies (objects), regardless of temperature, emit and absorb infrared radiation. The hotter the body, the more infrared radiation it radiates in a given time AND the shorter the peak wavelength emitted. A perfect black body absorbs ALL radiation incident on it (reflects/transmits none) and is the best possible emitter. A body stays at a constant temperature when the rate of radiation absorbed equals the rate of radiation emitted. Earth's temperature depends on the balance between incoming solar radiation absorbed and outgoing IR radiation emitted into space (affected by greenhouse gases like CO&sub2;/methane and cloud cover)."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. TRANSVERSE & LONGITUDINAL WAVES, PROPERTIES & WAVE EQUATIONS (16 Qs)
+      // ========================================================================
+      {
+        id: "P6_Q01",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "What do ALL waves transfer from one place to another, and what happens to the medium itself (such as water molecules in a pond or air particles in a room) as a wave passes through?",
+        options: [
+          "Waves transfer ENERGY (and information) without transferring matter—the particles of the medium oscillate around fixed positions and do not travel along with the wave",
+          "Waves transfer matter from the source to the receiver without transferring any energy",
+          "Waves permanently push air and water particles forward at the speed of light",
+          "Waves destroy energy as they travel through a medium"
+        ],
+        correct: 0,
+        insight: "AQA specification exact point: Waves may be either transverse or longitudinal. In both cases, it is the wave and NOT the water or air itself that travels—waves transfer energy without transferring matter."
+      },
+      {
+        id: "P6_Q02",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "How do TRANSVERSE waves differ from LONGITUDINAL waves in terms of the direction of oscillation?",
+        options: [
+          "In transverse waves, the oscillations are PERPENDICULAR (at right angles) to the direction of energy transfer; in longitudinal waves, the oscillations are PARALLEL to the direction of energy transfer (forming compressions and rarefactions)",
+          "In transverse waves, oscillations are parallel to energy transfer; in longitudinal waves, oscillations are perpendicular",
+          "Transverse waves require a solid medium; longitudinal waves only travel in a vacuum",
+          "Transverse waves have compressions and rarefactions; longitudinal waves have peaks and troughs"
+        ],
+        correct: 0,
+        insight: "AQA specification exact definitions: Transverse waves (ripples on water, electromagnetic waves, S-waves) have oscillations perpendicular to energy transfer; longitudinal waves (sound waves, P-waves) have oscillations parallel to energy transfer and show areas of compression and rarefaction."
+      },
+      {
+        id: "P6_Q03",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "Define the AMPLITUDE and the WAVELENGTH (&lambda;) of a transverse wave.",
+        options: [
+          "Amplitude: the maximum displacement of a point on a wave away from its undisturbed (rest) position; Wavelength: the distance from a point on one wave to the equivalent point on the adjacent wave (e.g. peak to peak)",
+          "Amplitude: the vertical distance from the bottom of a trough to the top of a peak; Wavelength: the number of waves passing a point per second",
+          "Amplitude: the distance travelled by one wave in 10 seconds; Wavelength: the time for one complete oscillation",
+          "Amplitude: the speed of the wave; Wavelength: half the distance between two adjacent troughs"
+        ],
+        correct: 0,
+        insight: "AQA specification exact definitions: Amplitude is the maximum displacement of a point on a wave away from its undisturbed position (NOT trough-to-peak, which is 2 &times; amplitude!). Wavelength is the distance from a point on one wave to the equivalent point on the adjacent wave."
+      },
+      {
+        id: "P6_Q04",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "A water wave has a frequency of 25 Hz. Calculate the PERIOD (T) of the wave.<br><span style='font-size:0.86rem; color:#1e40af;'>Equation: T = 1 / f</span>",
+        options: [
+          "0.04 s",
+          "25 s",
+          "0.25 s",
+          "2.5 s"
+        ],
+        correct: 0,
+        insight: "Period T = 1 &divide; f = 1 &divide; 25 = 0.04 s. Frequency (Hz) is the number of waves passing a point each second; Period (s) is the time taken for one complete wave."
+      },
+      {
+        id: "P6_Q05",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "A wave on a stretched string has a frequency of 40 Hz and a wavelength of 0.35 m. Calculate the WAVE SPEED.<br><span style='font-size:0.86rem; color:#1e40af;'>Equation: v = f &lambda;</span>",
+        options: [
+          "14 m/s",
+          "114 m/s",
+          "0.00875 m/s",
+          "40.35 m/s"
+        ],
+        correct: 0,
+        insight: "Wave speed v = f &times; &lambda; = 40 &times; 0.35 = 14 m/s."
+      },
+      {
+        id: "P6_Q06",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "An ultrasound scanner emits waves of frequency 2.5 MHz (2.5 &times; 10<sup>6</sup> Hz) that travel through soft body tissue at 1500 m/s. Calculate the WAVELENGTH of the ultrasound waves.",
+        options: [
+          "6.0 &times; 10<sup>&minus;4</sup> m (0.60 mm)",
+          "600 m",
+          "1667 m",
+          "3.75 &times; 10<sup>9</sup> m"
+        ],
+        correct: 0,
+        insight: "Convert MHz to Hz: 2.5 MHz = 2.5 &times; 10<sup>6</sup> Hz. Rearranging v = f &lambda; gives &lambda; = v &divide; f = 1500 &divide; (2.5 &times; 10<sup>6</sup>) = 6.0 &times; 10<sup>&minus;4</sup> m."
+      },
+      {
+        id: "P6_Q07",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "In Required Practical 8 (RP8 / RP20: Ripple Tank), a student counts 40 water waves passing a fixed mark on the screen in 16 seconds, and measures the distance across 10 complete wavelengths to be 24 cm. Calculate the WAVE SPEED in m/s.",
+        options: [
+          "0.060 m/s (f = 2.5 Hz, &lambda; = 0.024 m)",
+          "6.0 m/s",
+          "0.60 m/s",
+          "0.015 m/s"
+        ],
+        correct: 0,
+        insight: "Step 1: f = 40 waves &divide; 16 s = 2.5 Hz. Step 2: &lambda; = 24 cm &divide; 10 = 2.4 cm = 0.024 m. Step 3: v = f &times; &lambda; = 2.5 &times; 0.024 = 0.060 m/s."
+      },
+      {
+        id: "P6_Q08",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "In Required Practical 8 (Ripple Tank), why does the student measure the distance across 10 wavelengths and divide by 10 rather than measuring a single wavelength directly with a ruler?",
+        options: [
+          "Measuring across multiple waves reduces the percentage uncertainty / random measurement error in determining a single small wavelength",
+          "Because single waves do not exist in a ripple tank",
+          "To increase the frequency of the motor",
+          "Because water magnifies the ruler by a factor of 10"
+        ],
+        correct: 0,
+        insight: "AQA RP8 standard mark-scheme answer: Measuring across multiple wavelengths (e.g. 10) and dividing by the number of waves reduces the percentage error / uncertainty in the wavelength measurement."
+      },
+      {
+        id: "P6_Q09",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "In Required Practical 8 (Waves on a String), a vibration generator driven by a signal generator creates a stationary wave pattern on a taut string. How do you determine the WAVELENGTH from a stationary wave with 3 complete loops (half-wavelengths) spanning 1.20 m?",
+        options: [
+          "3 loops = 1.5 wavelengths, so &lambda; = 1.20 &divide; 1.5 = 0.80 m",
+          "&lambda; = 1.20 &divide; 3 = 0.40 m",
+          "&lambda; = 1.20 &times; 3 = 3.60 m",
+          "&lambda; = 1.20 m"
+        ],
+        correct: 0,
+        insight: "Each loop (node-to-node) is HALF a wavelength (&frac12;&lambda;). Therefore 3 loops = 1.5&lambda; &rArr; &lambda; = 1.20 &divide; 1.5 = 0.80 m."
+      },
+      {
+        id: "P6_Q10",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "Suggest ONE way to improve the accuracy of measuring wavelength on a moving ripple tank in Required Practical 8.",
+        options: [
+          "Use a stroboscope flashing at the same frequency as the dipper to 'freeze' the shadow pattern, OR take a photograph/video alongside a metre ruler on the screen",
+          "Turn off the overhead lamp completely",
+          "Stir the water vigorously with a hand while measuring",
+          "Use a thermometer instead of a ruler"
+        ],
+        correct: 0,
+        insight: "AQA RP8 mark-scheme improvement: Using a stroboscope (to freeze the wavefronts) or taking a still photograph/video with a scale ruler in view makes measuring moving wavefront positions far more accurate."
+      },
+      {
+        id: "P6_Q11",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "A radio station broadcasts at a frequency of 98.0 MHz. Radio waves travel at 3.0 &times; 10<sup>8</sup> m/s. Calculate the wavelength of the radio waves (to 2 significant figures).",
+        options: [
+          "3.1 m",
+          "0.33 m",
+          "3.1 &times; 10<sup>6</sup> m",
+          "2.9 &times; 10<sup>16</sup> m"
+        ],
+        correct: 0,
+        insight: "98.0 MHz = 9.80 &times; 10<sup>7</sup> Hz. &lambda; = v &divide; f = (3.0 &times; 10<sup>8</sup>) &divide; (9.80 &times; 10<sup>7</sup>) = 3.06 m &approx; 3.1 m."
+      },
+      {
+        id: "P6_Q12",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "A wave has a period T of 0.0050 s (5.0 ms). Calculate its FREQUENCY.",
+        options: [
+          "200 Hz",
+          "0.0050 Hz",
+          "20 Hz",
+          "500 Hz"
+        ],
+        correct: 0,
+        insight: "f = 1 &divide; T = 1 &divide; 0.0050 = 200 Hz."
+      },
+      {
+        id: "P6_Q13",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "Which row correctly matches TWO transverse waves and TWO longitudinal waves?",
+        options: [
+          "Transverse: Visible light, ripples on water; Longitudinal: Sound waves in air, seismic P-waves",
+          "Transverse: Sound waves in air, ultrasound; Longitudinal: X-rays, radio waves",
+          "Transverse: Seismic P-waves, infrared; Longitudinal: Gamma rays, seismic S-waves",
+          "Transverse: Ultrasound, microwaves; Longitudinal: Ultraviolet, water ripples"
+        ],
+        correct: 0,
+        insight: "All electromagnetic waves, water ripples, and seismic S-waves are transverse; sound, ultrasound, and seismic P-waves are longitudinal."
+      },
+      {
+        id: "P6_Q14",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "higher",
+        practicalOrCalc: true,
+        question: "In Required Practical 8 (Waves on a String), a student keeps the tension in the string constant (so wave speed v is constant) and DOUBLES the frequency of the vibration generator from 25 Hz to 50 Hz. What happens to the WAVELENGTH of the waves on the string?",
+        options: [
+          "The wavelength HALVES (since v = f&lambda; and v is constant, &lambda; is inversely proportional to f)",
+          "The wavelength DOUBLES",
+          "The wavelength stays the same",
+          "The wavelength quadruples"
+        ],
+        correct: 0,
+        insight: "At constant wave speed v (fixed string tension and mass per unit length), &lambda; = v / f, so doubling f halves &lambda;."
+      },
+      {
+        id: "P6_Q15",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "Look at the wave data table for three different waves travelling in the same medium. What is the missing wave speed X?<br><table class='data-table'><tr><th>Wave</th><th>Frequency (Hz)</th><th>Wavelength (m)</th><th>Wave Speed (m/s)</th></tr><tr><td>A</td><td>12</td><td>0.50</td><td>6.0</td></tr><tr><td>B</td><td>15</td><td>0.40</td><td>X</td></tr><tr><td>C</td><td>30</td><td>0.20</td><td>6.0</td></tr></table>",
+        options: [
+          "6.0 m/s",
+          "37.5 m/s",
+          "0.027 m/s",
+          "15.4 m/s"
+        ],
+        correct: 0,
+        insight: "v = f &times; &lambda; = 15 &times; 0.40 = 6.0 m/s."
+      },
+      {
+        id: "P6_Q16",
+        subtopic: "Transverse & Longitudinal Waves, Properties & Wave Equations",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "In a longitudinal sound wave travelling through air, what are COMPRESSIONS and RAREFACTIONS?",
+        options: [
+          "Compressions are regions where air particles are pushed closer together (higher pressure); rarefactions are regions where air particles are spread further apart (lower pressure)",
+          "Compressions are regions of zero air particles (vacuum); rarefactions are solid ice",
+          "Compressions are peaks above the normal line; rarefactions are troughs below it",
+          "Compressions occur only in transverse light waves"
+        ],
+        correct: 0,
+        insight: "Longitudinal waves propagate via alternating regions of high particle density/pressure (compressions) and low particle density/pressure (rarefactions)."
+      },
+
+      // ========================================================================
+      // 2. REFLECTION, REFRACTION & WAVEFRONTS (12 Questions)
+      // ========================================================================
+      {
+        id: "P6_Q17",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "State the LAW OF REFLECTION and explain how the angle of incidence (i) and angle of reflection (r) are measured.",
+        options: [
+          "Angle of incidence = Angle of reflection (i = r), with BOTH angles measured between the light ray and the NORMAL (a line drawn perpendicular / at 90&deg; to the reflecting surface at the point of incidence)",
+          "Angle of incidence = Angle of reflection, measured between the ray and the mirror surface itself",
+          "Angle of reflection is always twice the angle of incidence",
+          "Angle of incidence + Angle of reflection = 90&deg;"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact rule: Angle of incidence = angle of reflection. Always draw the normal at 90&deg; to the boundary and measure angles from the normal!"
+      },
+      {
+        id: "P6_Q18",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Distinguish between SPECULAR REFLECTION and DIFFUSE REFLECTION.",
+        options: [
+          "Specular reflection occurs from a smooth surface (like a plane mirror) in a single direction, forming a clear image; diffuse reflection (scattering) occurs from a rough surface (like paper) where light is scattered in many different directions so no image is formed",
+          "Specular reflection scatters light in all directions; diffuse reflection forms a sharp mirror image",
+          "Specular reflection only happens with sound waves; diffuse reflection only happens with X-rays",
+          "In diffuse reflection, individual rays disobey the law i = r"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact definitions: Reflection from a smooth surface in a single direction is called specular reflection. Reflection from a rough surface causes scattering: this is called diffuse reflection (each microscopic ray still obeys i = r, but the normals point in random directions)."
+      },
+      {
+        id: "P6_Q19",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "A ray of light strikes a flat plane mirror at an angle of 32&deg; to the MIRROR SURFACE. What is the angle of reflection (measured from the normal)?",
+        options: [
+          "58&deg;",
+          "32&deg;",
+          "64&deg;",
+          "148&deg;"
+        ],
+        correct: 0,
+        insight: "Classic exam trap! The angle to the mirror surface is 32&deg;, so the angle of incidence from the normal is 90&deg; &minus; 32&deg; = 58&deg;. Since i = r, angle of reflection r = 58&deg;."
+      },
+      {
+        id: "P6_Q20",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "In Required Practical 9 (RP9: Investigating reflection and refraction of light using a rectangular glass or Perspex block), outline the key experimental steps to obtain accurate results.",
+        options: [
+          "Place the block on plain paper and draw around its outline; direct a narrow ray from a ray box in a darkened room at an angle to the block; mark two crosses along the centre of the incident, reflected, and emergent rays; remove the block, join the crosses, draw the normal at 90&deg; with a protractor, and measure all angles from the normal",
+          "Shine a wide torch beam in bright sunlight and estimate the angles by eye without drawing a normal",
+          "Measure the angles between the rays and the long edge of the glass block",
+          "Heat the glass block in boiling water before shining the laser through it"
+        ],
+        correct: 0,
+        insight: "AQA RP9 mark-scheme essentials: Darkened room + narrow slit (thin ray), draw block outline, mark crosses on centre of rays, construct normal at 90&deg; to boundary, measure angles i and r from the normal using a protractor."
+      },
+      {
+        id: "P6_Q21",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "In Required Practical 9, a student tests two rectangular blocks of identical size—one made of Perspex and one made of glass—using the exact same angle of incidence (45&deg;). The angle of refraction is 29&deg; in Perspex and 28&deg; in glass. What does this show?",
+        options: [
+          "Different substances cause different amounts of refraction because light travels at slightly different speeds in glass and Perspex (glass slows light down slightly more, bending it closer to the normal)",
+          "Perspex and glass have the exact same optical density",
+          "The law of reflection is wrong",
+          "Frequency of light doubled inside the glass block"
+        ],
+        correct: 0,
+        insight: "AQA RP9 specification aim: Investigate the reflection of light by different types of surface and the refraction of light by different substances."
+      },
+      {
+        id: "P6_Q22",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Explain, in terms of WAVEFRONTS and WAVE SPEED, why a light wave (or water wave entering shallow water) bends TOWARDS THE NORMAL when it crosses a boundary into a medium where it travels MORE SLOWLY at an angle.",
+        options: [
+          "One side of each wavefront enters the slower medium first and slows down while the other side is still in the faster medium travelling at full speed, causing the wavefront to pivot/change direction towards the normal (and wavelength decreases while frequency stays constant)",
+          "Both sides of the wavefront speed up simultaneously, bending the ray away from the normal",
+          "The frequency of the wave decreases while the wavelength stays constant",
+          "The wave bounces completely backwards without entering the second medium"
+        ],
+        correct: 0,
+        insight: "AQA Higher Tier wavefront explanation: Because one edge of the wavefront slows down before the other edge, the wavefront slews around towards the normal. Frequency is fixed by the source, so since v = f&lambda;, a lower speed v means a shorter wavelength &lambda;."
+      },
+      {
+        id: "P6_Q23",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "A wave crosses a boundary from air into glass along the NORMAL (angle of incidence = 0&deg;). Which statement is completely correct?",
+        options: [
+          "The wave does NOT change direction (angle of refraction = 0&deg;), because the entire wavefront hits the boundary at the same instant and slows down evenly—however, its speed and wavelength STILL DECREASE",
+          "The wave bends at 45&deg; to the normal",
+          "The wave does not change direction AND its speed and wavelength stay completely unchanged",
+          "The wave stops completely at the surface"
+        ],
+        correct: 0,
+        insight: "AQA Higher Tier classic catch! When i = 0&deg;, direction does not change because all parts of the wavefront cross simultaneously, but v and &lambda; still decrease in the optically denser medium."
+      },
+      {
+        id: "P6_Q24",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "When a wave reaches a boundary between two different materials, which FOUR processes can happen to the wave?",
+        options: [
+          "The wave can be REFLECTED, ABSORBED, TRANSMITTED, or REFRACTED (depending on the wavelength of the wave and the properties of the materials)",
+          "The wave can only be destroyed",
+          "The wave can only be reflected",
+          "The wave turns into protons and neutrons"
+        ],
+        correct: 0,
+        insight: "AQA specification exact wording: Different substances may absorb, transmit, refract or reflect waves in ways that vary with wavelength."
+      },
+      {
+        id: "P6_Q25",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "When light leaves a glass block and enters air at an oblique angle (increasing wave speed), in which direction does the refracted ray bend?",
+        options: [
+          "AWAY FROM THE NORMAL (angle of refraction is greater than angle of incidence), and its speed and wavelength increase",
+          "TOWARDS THE NORMAL, and its speed decreases",
+          "It does not bend at all",
+          "It travels straight along the surface at 90&deg; for every angle of incidence"
+        ],
+        correct: 0,
+        insight: "Faster medium (glass &rarr; air) &rArr; edge exiting first speeds up first &rArr; bends AWAY from the normal."
+      },
+      {
+        id: "P6_Q26",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "higher",
+        practicalOrCalc: true,
+        question: "Water waves in a deep section of a ripple tank travel at 0.24 m/s with a wavelength of 0.040 m. When they pass into a shallow section, their speed drops to 0.15 m/s. Calculate the WAVELENGTH in the shallow water.",
+        options: [
+          "0.025 m (frequency remains 6.0 Hz across the boundary)",
+          "0.040 m",
+          "0.064 m",
+          "0.015 m"
+        ],
+        correct: 0,
+        insight: "Frequency f = v<sub>1</sub> &divide; &lambda;<sub>1</sub> = 0.24 &divide; 0.040 = 6.0 Hz (unchanged in shallow water). Therefore &lambda;<sub>2</sub> = v<sub>2</sub> &divide; f = 0.15 &divide; 6.0 = 0.025 m."
+      },
+      {
+        id: "P6_Q27",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Why does a rough sheet of white paper NOT act as a mirror even though it reflects most of the visible light that hits it?",
+        options: [
+          "Because the microscopic unevenness of the paper causes DIFFUSE REFLECTION, scattering reflected rays in many different directions instead of forming a coherent image",
+          "Because paper absorbs 100% of all visible light",
+          "Because paper refracts light into radio waves",
+          "Because paper is transparent"
+        ],
+        correct: 0,
+        insight: "Diffuse reflection scatters light in all directions so no virtual image can be seen."
+      },
+      {
+        id: "P6_Q28",
+        subtopic: "Reflection, Refraction & Wavefronts",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Which wave property NEVER changes when a wave undergoes refraction across a boundary between two different media?",
+        options: [
+          "Frequency (determined solely by the oscillating source)",
+          "Wave speed",
+          "Wavelength",
+          "Direction of travel (for non-zero angles of incidence)"
+        ],
+        correct: 0,
+        insight: "Frequency is fixed by the source producing the waves; speed and wavelength change proportionally (v = f&lambda;)."
+      },
+
+      // ========================================================================
+      // 3. THE ELECTROMAGNETIC SPECTRUM: PROPERTIES, USES & HAZARDS (16 Qs)
+      // ========================================================================
+      {
+        id: "P6_Q29",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "Which list places the seven regions of the ELECTROMAGNETIC SPECTRUM in order from LONGEST WAVELENGTH (lowest frequency) to SHORTEST WAVELENGTH (highest frequency)?",
+        options: [
+          "Radio waves &rarr; Microwaves &rarr; Infrared &rarr; Visible light &rarr; Ultraviolet &rarr; X-rays &rarr; Gamma rays",
+          "Gamma rays &rarr; X-rays &rarr; Ultraviolet &rarr; Visible light &rarr; Infrared &rarr; Microwaves &rarr; Radio waves",
+          "Radio waves &rarr; Infrared &rarr; Microwaves &rarr; Visible light &rarr; X-rays &rarr; Ultraviolet &rarr; Gamma rays",
+          "Microwaves &rarr; Radio waves &rarr; Visible light &rarr; Infrared &rarr; Ultraviolet &rarr; Gamma rays &rarr; X-rays"
+        ],
+        correct: 0,
+        insight: "AQA specification exact continuous spectrum order: Radio waves, microwaves, infrared, visible light (red to violet), ultraviolet, X-rays and gamma rays. Our eyes only detect visible light—a limited range of frequencies."
+      },
+      {
+        id: "P6_Q30",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "What two fundamental properties do ALL electromagnetic waves share?",
+        options: [
+          "They are all TRANSVERSE waves that transfer energy from the source to an absorber, and they all travel at the SAME VELOCITY (3.0 &times; 10<sup>8</sup> m/s) through a vacuum or air",
+          "They are all longitudinal waves that require air particles to travel",
+          "Gamma rays travel much faster than radio waves in a vacuum",
+          "They all have the exact same wavelength and frequency"
+        ],
+        correct: 0,
+        insight: "AQA specification exact wording: Electromagnetic waves are transverse waves that transfer energy from the source of the waves to an absorber. They form a continuous spectrum and all types travel at the same velocity through a vacuum (space) or air."
+      },
+      {
+        id: "P6_Q31",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Explain how RADIO WAVES are produced by a transmitter and how they are detected by a receiving aerial in Higher Tier Physics.",
+        options: [
+          "Radio waves are produced by OSCILLATIONS IN ELECTRICAL CIRCUITS; when radio waves are absorbed by a receiving aerial, they create an ALTERNATING CURRENT with the SAME FREQUENCY as the radio wave itself",
+          "Radio waves are emitted when unstable atomic nuclei undergo radioactive decay",
+          "Radio waves are produced by vibrating tuning forks and induce a direct current (DC)",
+          "Radio waves are produced by heating water in a Leslie cube"
+        ],
+        correct: 0,
+        insight: "AQA Higher Tier exact wording: Radio waves can be produced by oscillations in electrical circuits. When radio waves are absorbed they may create an alternating current with the same frequency as the radio wave itself, so radio waves can themselves induce oscillations in an electrical circuit."
+      },
+      {
+        id: "P6_Q32",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Where do GAMMA RAYS originate from, and how can changes in atoms and nuclei generate or absorb other electromagnetic waves?",
+        options: [
+          "Gamma rays originate from changes in the NUCLEUS of an atom; changes in atoms and the nuclei of atoms (such as electrons jumping between energy levels) can result in electromagnetic waves being generated or absorbed over a wide frequency range",
+          "Gamma rays are produced by oscillating electrons in a copper radio antenna",
+          "Gamma rays are produced only by friction between plastic rods",
+          "Gamma rays are longitudinal sound waves from atomic electrons"
+        ],
+        correct: 0,
+        insight: "AQA specification exact wording: Changes in atoms and the nuclei of atoms can result in electromagnetic waves being generated or absorbed over a wide frequency range. Gamma rays originate from changes in the nucleus of an atom."
+      },
+      {
+        id: "P6_Q33",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "Which three types of electromagnetic radiation are IONISING RADIATION, what are their biological hazards, and what is the unit of radiation dose?",
+        options: [
+          "Ultraviolet, X-rays, and Gamma rays — they can knock electrons off atoms, causing skin ageing/skin cancer (UV) or gene mutation and cancer (X-rays &amp; gamma rays). Radiation dose is measured in SIEVERTS (Sv) (1000 mSv = 1 Sv)",
+          "Radio waves, microwaves, and infrared — measured in Hertz (Hz)",
+          "Visible light, infrared, and radio waves — measured in Newtons (N)",
+          "Only radio waves are ionising — measured in Watts (W)"
+        ],
+        correct: 0,
+        insight: "AQA specification exact details: Ultraviolet waves, X-rays and gamma rays can have hazardous effects on human body tissue. Radiation dose (in Sieverts, Sv) is a measure of the risk of harm resulting from an exposure of the body to the radiation."
+      },
+      {
+        id: "P6_Q34",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "Match each electromagnetic wave to its correct practical application in the AQA specification:",
+        options: [
+          "Radio waves: television &amp; radio; Microwaves: satellite communications &amp; cooking food; Infrared: electrical heaters, cooking food &amp; infrared cameras; Visible light: fibre optic communications",
+          "Radio waves: sterilising medical instruments; Microwaves: fibre optics; Infrared: medical imaging of broken bones",
+          "Ultraviolet: satellite TV; X-rays: television broadcasting; Gamma rays: sun tanning beds",
+          "Visible light: cooking food in microwave ovens; Radio waves: killing cancer cells"
+        ],
+        correct: 0,
+        insight: "AQA specification uses: Radio waves (TV &amp; radio), Microwaves (satellite comms, cooking food), Infrared (electrical heaters, cooking food, IR cameras), Visible light (fibre optics), Ultraviolet (energy efficient lamps, sun tanning), X-rays &amp; gamma rays (medical imaging and treatments)."
+      },
+      {
+        id: "P6_Q35",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "In Required Practical 10 (RP10 / RP21: Investigating how the amount of infrared radiation emitted by a surface depends on the nature of that surface using a LESLIE CUBE), what is the correct ranking of infrared emission from HIGHEST to LOWEST?",
+        options: [
+          "Matt black (highest emitter) &gt; Shiny black &gt; White &gt; Shiny silver / metallic (lowest emitter)",
+          "Shiny silver (highest emitter) &gt; White &gt; Shiny black &gt; Matt black (lowest emitter)",
+          "All four faces emit the exact same amount of infrared radiation",
+          "White &gt; Shiny silver &gt; Matt black &gt; Shiny black"
+        ],
+        correct: 0,
+        insight: "AQA RP10 key conclusion: Dark, matt surfaces are the best emitters (and best absorbers) of infrared radiation, while light, shiny surfaces are the poorest emitters (and best reflectors)."
+      },
+      {
+        id: "P6_Q36",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "In Required Practical 10 (Leslie Cube), state TWO essential control variables needed to make the comparison between the four vertical faces fair and valid.",
+        options: [
+          "1. Keep the infrared detector (thermopile / IR thermometer) at the EXACT SAME DISTANCE from each face; 2. Ensure the water inside the Leslie cube is at the same temperature (or measure all four faces quickly before the water cools significantly)",
+          "1. Move the detector closer to the silver face; 2. Use cold ice water for the black face and boiling water for the silver face",
+          "1. Paint all four faces silver; 2. Vary the room lighting for each face",
+          "1. Measure each face for a different random number of minutes"
+        ],
+        correct: 0,
+        insight: "AQA RP10 mark scheme: Holding the IR detector at a constant distance from each face (using a ruler) ensures a valid comparison of intensity."
+      },
+      {
+        id: "P6_Q37",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Why are MICROWAVES used for satellite communications (such as satellite TV) instead of long-wavelength radio waves, and why are MICROWAVES able to heat food in a microwave oven?",
+        options: [
+          "Satellite comms: microwaves pass straight through Earth's ionosphere without being reflected; Cooking: microwaves are strongly absorbed by water molecules in food, transferring energy to their thermal energy store",
+          "Satellite comms: microwaves bounce off the ionosphere; Cooking: microwaves ionise DNA in food",
+          "Satellite comms: microwaves travel faster than light; Cooking: microwaves cool down water molecules",
+          "Microwaves are longitudinal sound waves that vibrate plates"
+        ],
+        correct: 0,
+        insight: "Microwaves penetrate the ionosphere to reach orbiting satellites, and specific microwave frequencies are absorbed by water/fat molecules in food."
+      },
+      {
+        id: "P6_Q38",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Explain why X-RAYS and GAMMA RAYS are suitable for medical imaging and cancer treatment (radiotherapy) despite being ionising radiation.",
+        options: [
+          "They have very short wavelengths and high penetrating power so they can pass through soft body tissue (X-rays are absorbed by dense bone to form shadow images; focused gamma rays can destroy targeted cancerous tumour cells inside the body)",
+          "They cannot pass through human skin at all",
+          "They have zero energy and never interact with cells",
+          "They are reflected completely by blood vessels"
+        ],
+        correct: 0,
+        insight: "High penetration allows internal imaging/treatment, while careful collimation and dose monitoring (in mSv) minimise healthy tissue exposure."
+      },
+      {
+        id: "P6_Q39",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "Look at the Required Practical 10 (Leslie Cube) student results table below. Which surface is most likely Surface C?<br><table class='data-table'><tr><th>Surface</th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th>IR Detector Reading (W/m&sup2;)</th><td>420</td><td>310</td><td>145</td><td>560</td></tr></table>",
+        options: [
+          "Shiny silver / polished metallic surface (lowest IR emission = 145 W/m&sup2;)",
+          "Matt black surface",
+          "Shiny black surface",
+          "Matt dark grey surface"
+        ],
+        correct: 0,
+        insight: "Surface D (560) = matt black, Surface A (420) = shiny black, Surface B (310) = white, Surface C (145) = shiny silver."
+      },
+      {
+        id: "P6_Q40",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "Why do different wavelengths of electromagnetic waves behave differently at boundaries (for example, why visible light is refracted by glass while X-rays pass straight through, or why long-wave radio waves diffract around hills)?",
+        options: [
+          "Different substances absorb, transmit, refract, or reflect electromagnetic waves in ways that vary with WAVELENGTH (and frequency)",
+          "Because only visible light is a transverse wave",
+          "Because X-rays have zero frequency",
+          "Because glass turns into a liquid when hit by X-rays"
+        ],
+        correct: 0,
+        insight: "AQA specification exact wording: Different substances may absorb, transmit, refract or reflect electromagnetic waves in ways that vary with wavelength. Some effects, for example refraction, are due to the difference in velocity of the waves in different substances."
+      },
+      {
+        id: "P6_Q41",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "How do ENERGY-EFFICIENT FLUORESCENT LAMPS use ultraviolet (UV) radiation to produce visible light?",
+        options: [
+          "UV radiation is produced inside the tube and absorbed by a phosphor coating on the inside of the glass, which then re-emits the energy as visible light",
+          "UV radiation is directly visible to the human eye",
+          "The lamp heats a tungsten wire to 10,000 &deg;C",
+          "UV radiation slows down into radio waves"
+        ],
+        correct: 0,
+        insight: "Fluorescence: high-frequency UV photons are absorbed by the phosphor coating and re-emitted at lower-frequency visible light wavelengths."
+      },
+      {
+        id: "P6_Q42",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: true,
+        question: "A chest X-ray gives a patient a radiation dose of 0.10 mSv, whereas a full-body CT scan gives a dose of 10 mSv. How many times greater is the radiation risk from the CT scan compared to the chest X-ray?",
+        options: [
+          "100 times greater (10 &divide; 0.10 = 100)",
+          "10 times greater",
+          "1000 times greater",
+          "0.01 times greater"
+        ],
+        correct: 0,
+        insight: "10 mSv &divide; 0.10 mSv = 100 times greater radiation dose (1 Sv = 1000 mSv)."
+      },
+      {
+        id: "P6_Q43",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "higher",
+        practicalOrCalc: false,
+        question: "How does an OPTICAL FIBRE transmit visible light (or infrared) signals over long distances with very little signal loss?",
+        options: [
+          "Light enters the glass core at an angle greater than the critical angle and undergoes repeated TOTAL INTERNAL REFLECTION along the inside of the fibre",
+          "Light travels as a longitudinal sound wave through the plastic jacket",
+          "Light escapes out of the sides of the fibre at every bend",
+          "Light is converted into gamma rays inside the fibre"
+        ],
+        correct: 0,
+        insight: "Optical fibres use visible light (or near-IR) undergoing total internal reflection inside a high-refractive-index glass core."
+      },
+      {
+        id: "P6_Q44",
+        subtopic: "The Electromagnetic Spectrum: Properties, Uses & Hazards",
+        tier: "foundation",
+        practicalOrCalc: false,
+        question: "Why is it hazardous to look directly at the Sun or use UV sunbeds excessively without protection?",
+        options: [
+          "Ultraviolet (UV) waves can damage surface cells, causing premature skin ageing, sunburn, eye damage (cataracts), and an increased risk of skin cancer",
+          "The Sun emits longitudinal sound waves that shatter glass",
+          "UV radiation freezes skin cells",
+          "Radio waves from the Sun cause immediate bone fractures"
+        ],
+        correct: 0,
+        insight: "AQA specification exact wording: Ultraviolet waves can cause skin to age prematurely and increase the risk of skin cancer."
+      },
+
+      // ========================================================================
+      // 4. SOUND WAVES, ULTRASOUND & SEISMIC WAVES [SEPARATE PHYSICS 8463] (12 Qs)
+      // ========================================================================
+      {
+        id: "P6_Q45",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Explain how sound waves travel through a solid (such as a metal rod) and why sound CANNOT travel through a vacuum (such as outer space).",
+        options: [
+          "Sound waves are longitudinal waves that travel through solids by causing vibrations to be passed from particle to particle; a vacuum contains no particles to vibrate, so sound cannot be transmitted",
+          "Sound waves travel through solids via electromagnetic fields, which disappear in space",
+          "Sound waves are transverse waves that need gravity to move",
+          "Sound actually travels fastest in a vacuum at 3.0 &times; 10<sup>8</sup> m/s"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact explanation: Sound waves can travel through solids causing vibrations in the solid. Within the ear, sound waves cause the ear drum and other parts to vibrate which causes the sensation of sound."
+      },
+      {
+        id: "P6_Q46",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "What is the normal frequency range of HUMAN HEARING, and why is human hearing limited to this range?",
+        options: [
+          "20 Hz to 20 kHz (20,000 Hz) — the conversion of sound waves to vibrations of solids (eardrum, ossicles, and cochlea hairs) only works over a limited frequency range",
+          "0.2 Hz to 200 Hz — because air cannot vibrate faster than 200 Hz",
+          "20 kHz to 20 MHz — because the eardrum only detects ultrasound",
+          "1 Hz to 100,000 Hz — all animals and humans hear identical frequencies"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact specification points: The range of normal human hearing is from 20 Hz to 20 kHz. The conversion of sound waves to vibrations of solids works over a limited frequency range, restricting the limits of human hearing."
+      },
+      {
+        id: "P6_Q47",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "What are ULTRASOUND waves, and how are they used in medical prenatal scanning and industrial crack detection?",
+        options: [
+          "Ultrasound waves are longitudinal sound waves with a frequency HIGHER than the upper limit of human hearing (&gt; 20 kHz / 20,000 Hz); they are partially reflected when they meet a boundary between two different media, and the time taken for the reflections to reach a detector is used to determine how far away the boundary is",
+          "Ultrasound waves are ionising electromagnetic waves with a frequency below 20 Hz",
+          "Ultrasound waves are completely absorbed by all soft tissues and never reflect",
+          "Ultrasound waves travel at 3.0 &times; 10<sup>8</sup> m/s inside the body"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact wording: Ultrasound waves have a frequency higher than the upper limit of hearing for humans. Ultrasound waves are partially reflected when they meet a boundary between two different media. The time taken for the reflections to reach a detector can be used to determine how far away such a boundary is."
+      },
+      {
+        id: "P6_Q48",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "A fishing boat uses ECHO SOUNDING (sonar) to measure the depth of the seabed. An ultrasound pulse takes 0.24 s to travel down to the seabed and return to the ship. If the speed of sound in seawater is 1500 m/s, calculate the DEPTH of the seabed.<br><span style='font-size:0.86rem; color:#1e40af;'>Equation: s = v t  (remember: pulse travels there AND back!)</span>",
+        options: [
+          "180 m",
+          "360 m",
+          "6250 m",
+          "720 m"
+        ],
+        correct: 0,
+        insight: "Total distance down and back = 1500 &times; 0.24 = 360 m. Depth = 360 &divide; 2 = 180 m. (Forgetting to divide by 2 is the #1 exam mistake on echo/ultrasound questions!)"
+      },
+      {
+        id: "P6_Q49",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "During an ultrasound scan of a metal casting, a reflected pulse from an internal crack is detected 4.0 &times; 10<sup>&minus;5</sup> s after transmission, while the reflection from the back wall is detected 1.0 &times; 10<sup>&minus;4</sup> s after transmission. If the speed of ultrasound in the metal is 5000 m/s, how deep below the front surface is the CRACK?",
+        options: [
+          "0.10 m (10 cm)",
+          "0.20 m (20 cm)",
+          "0.25 m (25 cm)",
+          "0.50 m (50 cm)"
+        ],
+        correct: 0,
+        insight: "Time to crack one-way = (4.0 &times; 10<sup>&minus;5</sup>) &divide; 2 = 2.0 &times; 10<sup>&minus;5</sup> s. Depth = v &times; t = 5000 &times; (2.0 &times; 10<sup>&minus;5</sup>) = 0.10 m (and total metal thickness = 0.25 m)."
+      },
+      {
+        id: "P6_Q50",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Give TWO advantages of using ULTRASOUND rather than X-rays for prenatal scanning of an unborn baby.",
+        options: [
+          "1. Ultrasound is NON-IONISING so it does not damage or mutate cells/DNA in the foetus or mother; 2. Ultrasound reflects clearly from boundaries between soft tissues (which X-rays pass straight through without showing detail)",
+          "1. Ultrasound travels faster than light; 2. Ultrasound sterilises the hospital room",
+          "1. Ultrasound is ionising radiation; 2. Ultrasound only shows dense bones",
+          "1. Ultrasound works in a vacuum; 2. Ultrasound uses gamma rays"
+        ],
+        correct: 0,
+        insight: "Non-ionising safety + soft-tissue boundary reflection are the two standard AQA mark-scheme points."
+      },
+      {
+        id: "P6_Q51",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Compare SEISMIC P-WAVES and SEISMIC S-WAVES produced by earthquakes.",
+        options: [
+          "P-waves (Primary) are LONGITUDINAL waves that travel faster and can pass through BOTH solids and liquids; S-waves (Secondary) are TRANSVERSE waves that travel slower and can ONLY pass through solids (NOT liquids)",
+          "P-waves are transverse and travel only through liquids; S-waves are longitudinal and travel through solids and liquids",
+          "Both P-waves and S-waves are transverse electromagnetic waves",
+          "S-waves travel faster than P-waves and pass straight through the liquid outer core"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact facts: P-waves are longitudinal, seismic waves. P-waves travel at different speeds through solids and liquids. S-waves are transverse, seismic waves. S-waves cannot travel through a liquid."
+      },
+      {
+        id: "P6_Q52",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "How has the study of seismic P-waves and S-waves provided evidence for the internal structure of the Earth (specifically the liquid outer core and solid inner core)?",
+        options: [
+          "S-waves are NOT detected on the opposite side of the Earth from an earthquake (creating an S-wave shadow zone), proving the Earth has a LIQUID outer core; P-waves are refracted abruptly at core boundaries, and weak P-wave reflections/refractions inside the shadow zone reveal a SOLID inner core",
+          "S-waves pass straight through the centre of the Earth without bending",
+          "P-waves are completely blocked by the solid crust",
+          "Seismometers on the Moon directly photograph the Earth's core"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact specification point: P-waves and S-waves provide evidence for the structure and size of the Earth's core, which is not directly observable."
+      },
+      {
+        id: "P6_Q53",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Why do seismic P-waves follow CURVED paths through the Earth's mantle rather than straight lines?",
+        options: [
+          "Because the density and properties of the rock change gradually with depth, causing the wave speed to change gradually and the P-waves to refract continuously",
+          "Because the Earth is flat",
+          "Because gravity pulls longitudinal waves sideways",
+          "Because P-waves are magnetic"
+        ],
+        correct: 0,
+        insight: "Gradual increase in rock density with depth increases seismic wave speed, producing continuous refraction along curved paths."
+      },
+      {
+        id: "P6_Q54",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "A sound wave of frequency 660 Hz travels through air at 330 m/s. When it enters a steel railway track, its speed increases to 5940 m/s. What is the WAVELENGTH of the sound in the steel track?",
+        options: [
+          "9.0 m (frequency stays 660 Hz, while wavelength increases from 0.50 m to 9.0 m)",
+          "0.50 m",
+          "0.11 m",
+          "18 m"
+        ],
+        correct: 0,
+        insight: "Frequency remains 660 Hz when entering a new medium; &lambda;<sub>steel</sub> = 5940 &divide; 660 = 9.0 m."
+      },
+      {
+        id: "P6_Q55",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "A student stands 82.5 m in front of a large flat cliff and claps two wooden blocks together, hearing the echo 0.50 s later. Calculate the speed of sound in air from this experiment.",
+        options: [
+          "330 m/s",
+          "165 m/s",
+          "41.25 m/s",
+          "660 m/s"
+        ],
+        correct: 0,
+        insight: "Total distance to cliff and back = 2 &times; 82.5 = 165 m. Speed v = 165 &divide; 0.50 = 330 m/s."
+      },
+      {
+        id: "P6_Q56",
+        subtopic: "Sound Waves, Ultrasound & Seismic Waves",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "As a person grows older, why do they often lose the ability to hear very high-pitched sounds (such as 16–20 kHz)?",
+        options: [
+          "Wear and tear / damage to the delicate sensory hair cells inside the cochlea (and reduced flexibility of the eardrum/ossicles) reduces sensitivity to high-frequency vibrations",
+          "The speed of sound in air decreases as you get older",
+          "High-frequency sound waves turn into radio waves near older people",
+          "The outer ear grows too large"
+        ],
+        correct: 0,
+        insight: "Cochlear hair cells tuned to high frequencies are most susceptible to age-related degeneration and loud-noise damage."
+      },
+
+      // ========================================================================
+      // 5. LENSES, RAY DIAGRAMS & VISIBLE LIGHT [SEPARATE PHYSICS 8463] (12 Qs)
+      // ========================================================================
+      {
+        id: "P6_Q57",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "How does a CONVEX (converging) lens differ from a CONCAVE (diverging) lens in its effect on parallel rays of light?",
+        options: [
+          "A convex lens brings parallel rays of light together (converges them) to meet at a real PRINCIPAL FOCUS; a concave lens spreads parallel rays of light outwards (diverges them) so they appear to come from a virtual principal focus",
+          "A convex lens spreads parallel rays outwards; a concave lens brings parallel rays together to a real focus",
+          "Both convex and concave lenses reflect all light backwards",
+          "Neither lens refracts light"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact wording: In a convex lens, parallel rays of light are brought to a focus at the principal focus. The distance from the lens to the principal focus is called the focal length."
+      },
+      {
+        id: "P6_Q58",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "What is the difference between a REAL IMAGE and a VIRTUAL IMAGE formed by a lens?",
+        options: [
+          "A real image is formed where light rays actually converge/meet and CAN be projected onto a screen (always inverted); a virtual image is formed where light rays only appear to diverge from and CANNOT be projected onto a screen (always upright)",
+          "A real image cannot be seen by the human eye; a virtual image can be projected onto a wall",
+          "A real image is always upright; a virtual image is always upside down",
+          "Concave lenses always form real images; convex lenses always form virtual images"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact distinction: Real images can be captured on a screen; virtual images (such as in a magnifying glass or any concave lens) cannot be projected onto a screen."
+      },
+      {
+        id: "P6_Q59",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "An object is placed closer to a CONVEX lens than its focal length (object distance &lt; f, acting as a magnifying glass). Describe the three characteristics of the image formed.",
+        options: [
+          "Virtual, upright, and magnified (larger than the object)",
+          "Real, inverted, and diminished",
+          "Real, inverted, and magnified",
+          "Virtual, inverted, and diminished"
+        ],
+        correct: 0,
+        insight: "AQA 8463 key ray-diagram case: When object distance &lt; f for a convex lens, the emerging rays diverge—tracing them back with dashed lines gives a virtual, upright, magnified image on the same side as the object."
+      },
+      {
+        id: "P6_Q60",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "What type of image is ALWAYS produced by a CONCAVE (diverging) lens, regardless of where the object is placed?",
+        options: [
+          "Virtual, upright, and diminished (smaller than the object)",
+          "Real, inverted, and magnified",
+          "Real, upright, and same size",
+          "Virtual, inverted, and magnified"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact rule: The image produced by a concave lens is ALWAYS virtual, upright, and diminished."
+      },
+      {
+        id: "P6_Q61",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "An object of height 1.5 cm is viewed through a magnifying glass, forming an image of height 6.0 cm. Calculate the MAGNIFICATION produced by the lens.<br><span style='font-size:0.86rem; color:#1e40af;'>Equation: magnification = image height / object height</span>",
+        options: [
+          "4.0 (no units — magnification is a ratio)",
+          "0.25 cm",
+          "9.0 cm&sup2;",
+          "4.0 cm"
+        ],
+        correct: 0,
+        insight: "AQA 8463 formula: magnification = image height &divide; object height = 6.0 &divide; 1.5 = 4.0. Note: magnification is a ratio of two lengths so it has NO units!"
+      },
+      {
+        id: "P6_Q62",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: true,
+        question: "A projector lens forms a real image on a screen with a magnification of 25. If the digital slide (object) has a height of 1.8 cm, calculate the height of the image on the screen.",
+        options: [
+          "45 cm (0.45 m)",
+          "0.072 cm",
+          "26.8 cm",
+          "13.9 cm"
+        ],
+        correct: 0,
+        insight: "image height = magnification &times; object height = 25 &times; 1.8 = 45 cm."
+      },
+      {
+        id: "P6_Q63",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "In standard AQA lens ray diagrams, what are the TWO principal construction rays drawn from the top of the object to locate the image?",
+        options: [
+          "Ray 1: Parallel to the principal axis, which refracts through (or away from) the principal focus F; Ray 2: Straight through the optical centre of the lens WITHOUT changing direction",
+          "Ray 1: Straight back along the principal axis; Ray 2: Bouncing off the top edge of the lens at 90&deg;",
+          "Ray 1: Stopping inside the centre of the lens; Ray 2: Curving in a circle around F",
+          "Only one ray is ever drawn in a ray diagram"
+        ],
+        correct: 0,
+        insight: "Ray through the optical centre is undeviated; ray parallel to the principal axis passes through F (convex) or appears to diverge from F (concave)."
+      },
+      {
+        id: "P6_Q64",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Within the VISIBLE LIGHT spectrum, how do RED light and VIOLET light compare in terms of wavelength and frequency?",
+        options: [
+          "Red light has the LONGEST wavelength and LOWEST frequency; Violet light has the SHORTEST wavelength and HIGHEST frequency",
+          "Red light has the shortest wavelength and highest frequency; Violet light has the longest wavelength",
+          "Red and violet light have identical wavelengths and frequencies",
+          "Green light has a longer wavelength than red light"
+        ],
+        correct: 0,
+        insight: "Order of visible spectrum from longest &lambda; to shortest &lambda;: Red, Orange, Yellow, Green, Blue, Indigo, Violet (ROYGBIV)."
+      },
+      {
+        id: "P6_Q65",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Explain why a ripe red tomato appears RED in white daylight, and what colour it appears when illuminated ONLY by pure BLUE light.",
+        options: [
+          "In white light, the tomato strongly REFLECTS red wavelengths and ABSORBS all other colours; in pure blue light, there is no red light to reflect and the blue light is absorbed, so the tomato appears BLACK",
+          "In white light, the tomato absorbs red light; in blue light, it appears bright yellow",
+          "In white light, the tomato transmits red light; in blue light, it appears white",
+          "In blue light, the tomato still appears bright red"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact explanation: The colour of an opaque object is determined by which wavelengths of light are more strongly reflected. Wavelengths that are not reflected are absorbed. If all wavelengths are absorbed the object appears black."
+      },
+      {
+        id: "P6_Q66",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "How do COLOUR FILTERS work, and what happens if white light passes first through a pure GREEN filter and then through a pure RED filter?",
+        options: [
+          "Colour filters work by absorbing certain wavelengths (colours) and transmitting other wavelengths; the green filter transmits only green light, which is then completely absorbed by the red filter, so NO light gets through (appears black)",
+          "Colour filters add dye molecules to white light; green + red filter produces bright yellow light",
+          "Both filters transmit all wavelengths equally",
+          "The red filter converts green light into blue light"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact wording: Colour filters work by absorbing certain wavelengths (and colour) and transmitting other wavelengths (and colour)."
+      },
+      {
+        id: "P6_Q67",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "What is the difference between TRANSPARENT objects and TRANSLUCENT objects?",
+        options: [
+          "Both transmit light, but a transparent object (like clear window glass) lets light pass straight through without scattering so objects behind can be seen clearly, whereas a translucent object (like frosted bathroom glass) scatters the transmitted light so clear images cannot be seen",
+          "Transparent objects reflect 100% of light; translucent objects absorb 100% of light",
+          "Transparent objects are opaque; translucent objects are mirrors",
+          "There is no difference between transparent and translucent"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact distinction: Objects that transmit light are either transparent or translucent (translucent materials scatter light internally)."
+      },
+      {
+        id: "P6_Q68",
+        subtopic: "Lenses, Ray Diagrams & Visible Light",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Why does an object appear WHITE in white light, whereas soot appears BLACK?",
+        options: [
+          "A white object reflects ALL wavelengths of visible light equally; a black object absorbs ALL wavelengths of visible light (reflecting none)",
+          "A white object absorbs all wavelengths; a black object reflects all wavelengths",
+          "White objects emit X-rays; black objects emit radio waves",
+          "White objects are transparent"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact wording: If all wavelengths are reflected equally the object appears white. If all wavelengths are absorbed the object appears black."
+      },
+
+      // ========================================================================
+      // 6. BLACK BODY RADIATION & EARTH'S TEMPERATURE [SEPARATE PHYSICS 8463] (8 Qs)
+      // ========================================================================
+      {
+        id: "P6_Q69",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Which objects emit and absorb INFRARED RADIATION, and how does the radiation emitted by an object change as its TEMPERATURE increases?",
+        options: [
+          "ALL bodies (objects), no matter what temperature, emit and absorb infrared radiation; the hotter the body, the MORE infrared radiation it radiates in a given time (and the shorter the peak wavelength emitted)",
+          "Only objects hotter than 100 &deg;C emit infrared radiation; cold objects below 0 &deg;C emit none",
+          "Hotter objects emit LESS infrared radiation than cold objects",
+          "Only black objects emit infrared radiation; white objects never emit any"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact specification points: All bodies (objects), no matter what temperature, emit and absorb infrared radiation. The hotter the body, the more infrared radiation it radiates in a given time."
+      },
+      {
+        id: "P6_Q70",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Define a PERFECT BLACK BODY in AQA Separate Physics (8463).",
+        options: [
+          "An object that absorbs ALL of the radiation incident on it (it does not reflect or transmit any radiation)—since a good absorber is also a good emitter, a perfect black body is also the BEST POSSIBLE EMITTER of radiation",
+          "An object that reflects 100% of all radiation incident on it and emits nothing",
+          "Any object painted with glossy white paint",
+          "A star that has cooled down to absolute zero"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact definition: A perfect black body is an object that absorbs all of the radiation incident on it. A black body does not reflect or transmit any radiation. Since a good absorber is also a good emitter, a perfect black body would be the best possible emitter."
+      },
+      {
+        id: "P6_Q71",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "In terms of the rates of absorption and emission of radiation, what is the condition for a body to remain at a CONSTANT TEMPERATURE?",
+        options: [
+          "A body at constant temperature is absorbing radiation at the EXACT SAME RATE as it is emitting radiation",
+          "A body at constant temperature emits zero radiation",
+          "A body at constant temperature absorbs radiation twice as fast as it emits it",
+          "A body at constant temperature reflects all incoming radiation"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact wording: A body at constant temperature is absorbing radiation at the same rate as it is emitting radiation. The temperature of a body increases when the body absorbs radiation faster than it emits radiation."
+      },
+      {
+        id: "P6_Q72",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "What happens to the temperature of an object if it absorbs infrared radiation FASTER than it emits infrared radiation?",
+        options: [
+          "The temperature of the object INCREASES (until its rate of emission rises to match its rate of absorption)",
+          "The temperature of the object DECREASES",
+          "The temperature stays constant",
+          "The object immediately freezes"
+        ],
+        correct: 0,
+        insight: "Net energy intake &rArr; internal thermal energy store rises &rArr; temperature increases."
+      },
+      {
+        id: "P6_Q73",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Explain how the temperature of the EARTH is determined by radiation balance, and how increasing concentrations of GREENHOUSE GASES (such as carbon dioxide and methane) cause global warming.",
+        options: [
+          "Earth's temperature depends on the balance between incoming solar radiation absorbed and outgoing infrared radiation emitted back into space; greenhouse gases absorb long-wavelength infrared radiation emitted by Earth's surface and re-radiate it in all directions (including back towards Earth), reducing the rate of energy loss to space so Earth warms up",
+          "Greenhouse gases block all sunlight from reaching Earth, causing rapid global cooling",
+          "Earth's temperature is controlled solely by heat from the Moon",
+          "Greenhouse gases turn incoming sunlight into gamma rays"
+        ],
+        correct: 0,
+        insight: "AQA 8463 exact explanation: The temperature of the Earth depends on many factors including: the rates of absorption and emission of radiation, and reflection of radiation into space."
+      },
+      {
+        id: "P6_Q74",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "As an iron bar is heated strongly in a furnace from 500 &deg;C (dull red glow) to 1500 &deg;C (bright white-yellow glow), how do the INTENSITY and WAVELENGTH distribution of the emitted radiation change?",
+        options: [
+          "The total intensity of radiation emitted increases at ALL wavelengths, AND the peak intensity shifts towards SHORTER wavelengths (higher frequencies, moving into visible red, yellow, and blue)",
+          "The total intensity decreases and shifts to longer radio wavelengths",
+          "Only the infrared intensity increases while visible light remains zero",
+          "The peak wavelength stays completely fixed"
+        ],
+        correct: 0,
+        insight: "Higher temperature &rArr; steeper emission curve at every wavelength AND peak wavelength &lambda;<sub>peak</sub> shifts to shorter wavelengths."
+      },
+      {
+        id: "P6_Q75",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "During a clear, cloudless night in winter, why does the ground cool down MUCH FASTER than on a cloudy night?",
+        options: [
+          "Without cloud cover, the infrared radiation emitted by the Earth's surface escapes directly into space instead of being absorbed and re-radiated back downwards by clouds",
+          "Clouds generate sunlight at night",
+          "Clear air has zero oxygen",
+          "Clouds pull heat out of the ground faster"
+        ],
+        correct: 0,
+        insight: "Cloud cover acts as a thermal blanket, absorbing outgoing terrestrial IR and re-emitting IR back down to the surface."
+      },
+      {
+        id: "P6_Q76",
+        subtopic: "Black Body Radiation & Earth's Temperature",
+        tier: "triple",
+        practicalOrCalc: false,
+        question: "Why does the melting of Arctic sea ice (which exposes darker ocean water underneath) create a positive feedback loop that accelerates warming?",
+        options: [
+          "White ice reflects a high fraction of incoming solar radiation, whereas dark ocean water absorbs much more solar radiation and reflects less into space—increasing Earth's rate of radiation absorption",
+          "Dark ocean water reflects more sunlight than white ice",
+          "Ice emits gamma rays when it melts",
+          "Melting ice stops the Sun from shining"
+        ],
+        correct: 0,
+        insight: "Reduced reflection of solar radiation into space increases net energy absorbed by Earth's surface."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practicals'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Physics", badge: "Separate Physics Selected" }
+    };
+
+    const FOCUS_META = {
+      all: "All Waves Topics",
+      practicals: "Required Practicals & Calculations Only"
+    };
+
+    /* ==========================================================================
+       TIER INCLUSION LOGIC:
+       - Foundation: 'foundation' questions only
+       - Higher: 'foundation' + 'higher' questions (Combined Science 8464 Higher)
+       - Separate Physics: 'foundation' + 'higher' + 'triple' questions (Full 8463)
+       ========================================================================== */
+    function isQuestionInTier(q, selectedTier) {
+      if (selectedTier === "foundation") return q.tier === "foundation";
+      if (selectedTier === "higher") return q.tier === "foundation" || q.tier === "higher";
+      return true; // 'separate' includes all 8463 + 8464 content
+    }
+
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = isQuestionInTier(q, configState.tier);
+        const focusMatch = configState.focus === "all" ? true : q.practicalOrCalc === true;
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practicals"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practicals" ? " (RP8/RP9/RP10 & Calculations)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const capBanner = document.getElementById("cap-feedback-banner");
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+
+      if (configState.questionCount > pool.length) {
+        capBanner.textContent =
+          `Note: ${TIER_META[configState.tier].name}${focusSuffix} has ${pool.length} unique questions in the bank, so your quiz will run all ${pool.length} available unique questions.`;
+        capBanner.classList.remove("hidden");
+      } else {
+        capBanner.classList.add("hidden");
+      }
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${effectiveCount} Questions) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    /* Randomises option positions per question instance while tracking the correct answer */
+    function prepareQuestionInstance(qObj) {
+      const indexedOptions = qObj.options.map((text, idx) => ({
+        text,
+        isRight: idx === qObj.correct
+      }));
+      const shuffled = shuffleArray(indexedOptions);
+      return {
+        ...qObj,
+        options: shuffled.map(o => o.text),
+        correct: shuffled.findIndex(o => o.isRight)
+      };
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool
+        .slice(0, Math.min(configState.questionCount, pool.length))
+        .map(prepareQuestionInstance);
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Topic 6: Waves";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => prepareQuestionInstance(item.question));
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Waves Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 6 content or Required Practicals & Calculations only, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-focus-pill").textContent = FOCUS_META[configState.focus];
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      const kickerEl = document.getElementById("q-kicker-label");
+      kickerEl.innerHTML = `<span>Question ${idx + 1} of ${total} &bull; ${qObj.subtopic}</span>` +
+        (qObj.practicalOrCalc ? `<span class="rp-badge">RP8/RP9/RP10 &bull; CALCULATION</span>` : "");
+
+      document.getElementById("q-stem-text").innerHTML = qObj.question;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      formulaBox.classList.add("hidden");
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.correct;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.correct) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.correct];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.insight;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 6 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 6 Waves knowledge, practical methods, and calculation skills are exam-ready.`;
+      } else if (pct >= 75) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Waves. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, study the AQA Examiner Insights, and retry your missed questions to push into the top grade boundaries.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in red below, read the tailored AQA revision guidance, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.subtopic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 75) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 75
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show Full Question-by-Question Review";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.correct]}. ${q.options[q.correct]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.subtopic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.question}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--rose-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.insight}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 4–5 (Maximum Foundation)";
+        if (pct >= 62) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 45) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 80) return "Estimated AQA Indicator: Grade 8–9";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 6–7";
+      if (pct >= 48) return "Estimated AQA Indicator: Grade 4–5";
+      return "Estimated AQA Indicator: Grade 3 / Below (Target Revision)";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show Full Question-by-Question Review" : "Hide Full Question-by-Question Review";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
